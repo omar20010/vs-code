@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        header {
+            background-color: #ff0000;
+            padding: 5px;
+
+            font-weight: bold;
+
+        }
+
+        body {
+            background-color: rgb(0, 0, 0);
+            color: #fff;
+        }
+
+        header h1 {
+            color: #e70101;
+            text-align: center;
+        }
+
+        header ul {
+
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+
+
+
+        }
+
+        header ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        header ul li a {
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        header ul li a:hover {
+            color: #746969;
+        }
+
+        .nn {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            margin: 0;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .mm {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ll {
+            margin-bottom: 8px;
+        }
+
+        .ii {
+            padding: 12px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        input[type="submit"] {
+            background-color: rgb(255, .0, 0);
+            color: #000000;
+            cursor: grab;
+            width: 240px;
+            height: 40px;
+            background-color: #e70101;
+            border-radius: 8px;
+
+        }
+        input[type="submit"]:hover{
+            background-color: rgb(217, 145, 145)
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Include the common header on all pages -->
+    <div id="header-container">
+        <!-- Include the header content here -->
+        <header>
+            <img src="gggg.png" alt="Your Workshop Logo" class="logo" height="50" width="250">
+
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="book.html">Book</a></li>
+                    <li><a href="login.html">LogIn</a></li>
+                    <li><a href="signup.html">Register</a></li>
+
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+
+    <div class="nn" class="container">
+        <form class="mm" action="signup.php" method="post">
+
+            <label class="ll" for="fname">First Name:</label>
+            <input class="ii" type="text" id="fname" name="fname" required>
+
+            <label class="ll" for="lname">Last Name:</label>
+            <input class="ii" type="text" id="lname" name="lname" required>
+
+            <label class="ll" for="username">User Name:</label>
+            <input class="ii" type="text" id="username" name="username" required>
+
+            <label class="ll" for="birthdate">Birth Date:</label>
+            <input class="ii" type="date" id="birthdate" name="birthdate" required>
+
+            <label class="ll" for="password">Password:</label>
+            <input class="ii" type="password" id="password" name="password" required>
+
+            <input type="submit" value="Sign Up">
+
+              </form>
+
+            
+
+        
+
+    </div>
+
+</body>
+
+</html>
