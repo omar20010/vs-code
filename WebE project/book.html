@@ -4,124 +4,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book</title>
+    <title>Appointments</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
         header {
             background-color: #ff0000;
             padding: 5px;
-
             font-weight: bold;
-
-        }
-
-        body {
-            background-color: rgb(0, 0, 0);
         }
 
         header h1 {
             color: #e70101;
             text-align: center;
+            margin: 0;
         }
 
         header ul {
-
             display: flex;
             justify-content: space-around;
             list-style: none;
-
-
-
+            padding: 0;
         }
 
         header ul li {
-            display: inline;
             margin-right: 10px;
         }
 
         header ul li a {
             color: #333;
             text-transform: uppercase;
+            text-decoration: none;
         }
 
         header ul li a:hover {
             color: #746969;
         }
 
+        /* Dropdown styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
 
-body, h1, h2, ul, li {
-    margin: 0;
-    padding: 0;
-}
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-}
+        .dropdown-content a {
+            color: rgb(255, 0, 0);
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+        }
 
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
 
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 
-/* Dropdown styles */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: rgb(255, 0, 0);
-    padding: 10px;
-    display: block;
-    text-decoration: none;
-}
-
-.dropdown-content a:hover {
-    background-color: #555;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+        .logo {
+            margin: 10px;
+        }
     </style>
 
 </head>
 
 <body>
-
     <!-- Include the common header on all pages -->
     <div>
         <!-- Include the header content here -->
         <header>
-
             <img src="gggg.png" alt="Your Workshop Logo" class="logo" height="50" width="250">
-
             <div class="menu-bar">
                 <ul>
                     <li><a href="home.html">Home</a></li>
                     <li><a href="aboutus.html">About Us</a></li>
                     <li><a href="contactus.html">Contact Us</a></li>
                     <li class="dropdown">
-                        <a href="book.html" class="dropbtn">Book</a>
+                        <a href="book.html" class="dropbtn">Appointments</a>
                         <div class="dropdown-content">
                             <a href="newappointment.html">New Appointment</a>
                             <a href="showappointment.html">Show Appointment</a>
                         </div>
                     </li>
-                    <li><a href="login.html">LogIn</a></li>
-                    <li><a href="signup.html">Register</a></li>
-
+                    <li><a href="login.html">Log In</a></li>
+                    <li><a href="register.html">Register</a></li>
                 </ul>
             </div>
         </header>
     </div>
-
-
 </body>
 
 </html>

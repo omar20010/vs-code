@@ -10,13 +10,13 @@
         header {
             background-color: #ff0000;
             padding: 5px;
-
             font-weight: bold;
-
         }
 
         body {
             background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
         }
 
         header h1 {
@@ -25,13 +25,9 @@
         }
 
         header ul {
-
             display: flex;
             justify-content: space-around;
             list-style: none;
-
-
-
         }
 
         header ul li {
@@ -42,13 +38,42 @@
         header ul li a {
             color: #333;
             text-transform: uppercase;
+            text-decoration: none;
         }
 
         header ul li a:hover {
             color: #746969;
         }
-    </style>
 
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        textarea {
+            height: 100px;
+        }
+    </style>
 </head>
 
 <body>
@@ -58,22 +83,150 @@
         <!-- Include the header content here -->
         <header>
             <img src="gggg.png" alt="Your Workshop Logo" class="logo" height="50" width="250">
-
             <nav>
                 <ul>
                     <li><a href="home.html">Home</a></li>
                     <li><a href="aboutus.html">About Us</a></li>
                     <li><a href="contactus.html">Contact Us</a></li>
-                    <li><a href="book.html">Book</a></li>
+                    <li><a href="book.html">Appointments</a></li>
                     <li><a href="login.html">LogIn</a></li>
-                    <li><a href="signup.html">Register</a></li>
-
+                    <li><a href="register.html">Register</a></li>
                 </ul>
             </nav>
         </header>
     </div>
 
     <!-- Main content of the page goes here -->
+    <form action="process_appointment.php" method="post">
+        <label for="carType">1. Choose Car Type:</label>
+        <select id="carType" name="carType" required>
+            <option value="Choose Your Car Type">Choose Your Car Type</option>
+            <option value="audi-a4-allroad">Audi A4 Allroad</option>
+            <option value="audi-a6">Audi A6</option>
+            <option value="audi-a8">Audi A8</option>
+            <option value="audi-e-tron">Audi e-tron</option>
+            <option value="aston-martin-db11">Aston Martin DB11</option>
+            <option value="bmw-5-series">BMW 5 Series</option>
+            <option value="bmw-7-series">BMW 7 Series</option>
+            <option value="bmw-m3">BMW M3</option>
+            <option value="bmw-z4">BMW Z4</option>
+            <option value="bugatti-veyron">Bugatti Veyron</option>
+            <option value="chevrolet-camaro-convertible">Chevrolet Camaro Convertible</option>
+            <option value="chevrolet-silverado">Chevrolet Silverado</option>
+            <option value="chevrolet-spark">Chevrolet Spark</option>
+            <option value="chevrolet-suburban">Chevrolet Suburban</option>
+            <option value="chrysler-pacifica">Chrysler Pacifica</option>
+            <option value="ferrari-gtc4lusso">Ferrari GTC4Lusso</option>
+            <option value="ferrari-laferrari">Ferrari LaFerrari</option>
+            <option value="fiat-500">Fiat 500</option>
+            <option value="ford-escape">Ford Escape</option>
+            <option value="ford-expedition">Ford Expedition</option>
+            <option value="ford-explorer">Ford Explorer</option>
+            <option value="ford-f-150">Ford F-150</option>
+            <option value="ford-fiesta">Ford Fiesta</option>
+            <option value="ford-focus-st">Ford Focus ST</option>
+            <option value="ford-transit">Ford Transit</option>
+            <option value="gmc-yukon">GMC Yukon</option>
+            <option value="honda-civic">Honda Civic</option>
+            <option value="honda-civic-type-r">Honda Civic Type R</option>
+            <option value="honda-clarity">Honda Clarity</option>
+            <option value="honda-cr-v">Honda CR-V</option>
+            <option value="honda-fit">Honda Fit</option>
+            <option value="honda-odyssey">Honda Odyssey</option>
+            <option value="hyundai-i10">Hyundai i10</option>
+            <option value="jaguar-i-pace">Jaguar I-PACE</option>
+            <option value="jeep-grand-cherokee">Jeep Grand Cherokee</option>
+            <option value="jeep-wrangler">Jeep Wrangler</option>
+            <option value="land-rover-defender">Land Rover Defender</option>
+            <option value="lexus-rx-hybrid">Lexus RX Hybrid</option>
+            <option value="mazda-cx-5">Mazda CX-5</option>
+            <option value="mazda-mx-5-miata">Mazda MX-5 Miata</option>
+            <option value="mercedes-benz-e-class">Mercedes-Benz E-Class</option>
+            <option value="mercedes-benz-s-class">Mercedes-Benz S-Class</option>
+            <option value="mercedes-benz-sprinter">Mercedes-Benz Sprinter</option>
+            <option value="nissan-rogue">Nissan Rogue</option>
+            <option value="porsche-911">Porsche 911</option>
+            <option value="ram-1500">Ram 1500</option>
+            <option value="ram-promaster">Ram ProMaster</option>
+            <option value="renault-clio">Renault Clio</option>
+            <option value="smart-fortwo">Smart Fortwo</option>
+            <option value="subaru-crosstrek">Subaru Crosstrek</option>
+            <option value="subaru-outback">Subaru Outback</option>
+            <option value="tesla-model-x">Tesla Model X</option>
+            <option value="toyota-aygo">Toyota Aygo</option>
+            <option value="toyota-corolla">Toyota Corolla</option>
+            <option value="toyota-highlander">Toyota Highlander</option>
+            <option value="toyota-land-cruiser">Toyota Land Cruiser</option>
+            <option value="toyota-mirai">Toyota Mirai</option>
+            <option value="toyota-rav4">Toyota RAV4</option>
+            <option value="toyota-rav4-hybrid">Toyota RAV4 Hybrid</option>
+            <option value="toyota-sienna">Toyota Sienna</option>
+            <option value="volkswagen-golf">Volkswagen Golf</option>
+            <option value="volkswagen-golf-gti">Volkswagen Golf GTI</option>
+            <option value="volkswagen-polo">Volkswagen Polo</option>
+            <option value="volvo-v60">Volvo V60</option>
+
+        </select>
+
+        <label for="carModel">2. Choose Car Model:</label>
+        <select id="carModel" name="carModel" required>
+            <option value="CAR MODEL">CAR MODEL</option>
+            <option value="1990">1990</option>
+            <option value="1991">1991</option>
+            <option value="1992">1992</option>
+            <option value="1993">1993</option>
+            <option value="1994">1994</option>
+            <option value="1995">1995</option>
+            <option value="1996">1996</option>
+            <option value="1997">1997</option>
+            <option value="1998">1998</option>
+            <option value="1999">1999</option>
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+        </select>
+
+        <label for="whatToDo">3. What do you want to do:</label>
+        <select id="whatToDo" name="whatToDo" required>
+            <option value="choose what to do">choose what you want to do.</option>
+            <option value="change-oil">Change oil and oil filter routinely.</option>
+            <option value="fluids-filled">Keep all fluids appropriately filled. That may be included with oil changes.
+            </option>
+            <option value="replace-spark-plugs">Replace spark plugs.</option>
+            <option value="replace-coolant">Replace coolant.</option>
+            <option value="check-brake-fluid">Check brake fluid.</option>
+            <option value="others">Others</option>
+        </select>
+
+        <label for="dateTime">3. Choose the Date and Time:</label>
+        <input type="datetime-local" id="dateTime" name="dateTime" required>
+
+
+        <label for="customerProblem">5. What do you think the problem is? (optional)</label>
+        <textarea id="customerProblem" name="customerProblem"></textarea>
+
+        <input type="submit" value="Make an Appointment">
+    </form>
 
 </body>
 
