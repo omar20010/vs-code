@@ -10,13 +10,12 @@
         header {
             background-color: #ff0000;
             padding: 5px;
-
             font-weight: bold;
-
         }
 
         body {
             background-color: black;
+            position: relative; /* Added position relative for positioning the image */
         }
 
         header h1 {
@@ -25,13 +24,9 @@
         }
 
         header ul {
-
             display: flex;
             justify-content: space-around;
             list-style: none;
-
-
-
         }
 
         header ul li {
@@ -47,12 +42,26 @@
         header ul li a:hover {
             color: #746969;
         }
-    </style>
 
+        #content-container {
+            color: rgb(0, 255, 251);
+            padding: 20px;
+        }
+
+        
+    /* ...existing styles... */
+    .bottom-right-image {
+        position: absolute;
+        bottom: -90px;
+        right: 200px;
+        min-width: 40%;
+        min-height: 40%;
+    }
+
+    </style>
 </head>
 
 <body>
-
     <!-- Include the common header on all pages -->
     <div id="header-container">
         <!-- Include the header content here -->
@@ -67,18 +76,35 @@
                     <li><a href="book.html">Appointments</a></li>
                     <li><a href="login.html">LogIn</a></li>
                     <li><a href="register.html">Register</a></li>
-
                 </ul>
             </nav>
-            <!--   <div>
-        <img src="mechanic-repairing-a-car-on-dark-background-3d-rendering-futuristic-ai-robot-mechanic-repairing-cars-ai-generated-free-photo.jpg"
-            alt="car_machine photo" height="800" , width=100%>
-    </div>-->
         </header>
     </div>
 
     <!-- Main content of the page goes here -->
+    <div id="content-container">
+        <h1>About Our Car Workshop</h1>
+        <p>
+            Welcome to our car workshop, where we provide exceptional services for all your automotive needs. With years of
+            experience in the industry, our skilled technicians are dedicated to delivering top-notch quality and customer
+            satisfaction.
+        </p>
 
+        <h2>What We Offer</h2>
+        <ul>
+            <li>Car maintenance and repairs</li>
+            <li>Oil changes</li>
+            <li>Brake and suspension services</li>
+            <li>Engine diagnostics and repairs</li>
+            <li>Replace spark plugs</li>
+            <li>Wheel alignment and tire services</li>
+            <li>Replace coolant</li>
+            <li>And much more!</li>
+        </ul>
+
+        <!-- Adding the image at the bottom right corner -->
+        <img src="pic.PNG" alt="Image" class="bottom-right-image">
+    </div>
 </body>
 
 </html>
